@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {{ title|default:"Qwerty" }}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+</head>
+<body>
+
+{% block body %}
+<h1>A1!!!!!1</h1>
+
+    <p>Total authors: {{ total }}</p>
+{% endblock %}
+</body>
+</html>

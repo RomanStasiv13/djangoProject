@@ -1,0 +1,10 @@
+{% extends 'all_index.html' %}
+
+{% block body %}
+    Authors:
+    {% for a in authors %}
+        <p>
+        <a href="{% url 'one_n_lnk' id=a.pk %}">{{ a.name }}</a>
+            {{ a.name }}: {{ a.news_count }} {{ a.nationality.name }} <img src="{{ a.photo.url }}"></p>
+    {% endfor %}
+{% endblock %}
